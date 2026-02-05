@@ -23,3 +23,13 @@ A real-time task notification system.
     └── README.md
 </pre>
 
+### How it works (quick)
+
+1. User triggers a task
+
+2. Task completes → emits 'TASK_COMPLETED' event
+
+3. Notification worker listens to event
+
+4. Notification pushed to React UI via WebSocket
+
