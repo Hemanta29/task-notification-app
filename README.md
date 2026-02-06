@@ -1,4 +1,4 @@
-# task-notification-app
+# Task-Notification-App
 A real-time task notification system.
 
 ## Project Structure
