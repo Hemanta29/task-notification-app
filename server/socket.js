@@ -22,5 +22,9 @@ export const initSocket = (server) => {
 }
 
 export const sendNotification = (userId, message) => {
+  if (!io) {
+    console.error("Socket.io not initialized yet");
+    return;
+  }
   io.to(userId).emit("notification", message);
 }

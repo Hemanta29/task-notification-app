@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { socket } from "./socket";
 
 interface Notification {
-  taskId: string;
+  title: string;
   userId: string;
   message: string;
 }
@@ -31,9 +31,9 @@ export default function App() {
       </button>
 
       <ul>
-        {notifications.map((n: any, i: number) => (
+        {notifications.map((n: Notification, i: number) => (
           <li key={i}>
-            <strong>{n.title}</strong> – {n.message}
+            <strong>{n.title}</strong> - {n.message}
           </li>
         ))}
       </ul>
